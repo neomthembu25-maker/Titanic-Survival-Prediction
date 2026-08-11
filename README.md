@@ -60,7 +60,7 @@ Logistic regression also gives interpretable odds ratios for each predictor, whi
 install.packages(c("tidyverse", "caret", "randomForest", "xgboost", "ggplot2", "corrplot", "gridExtra", "stringi"))
 
 # Run the script
-source("titanic_clean.R")
+source("titanic_survival.R")
 ```
 
 Update the `read.csv()` file paths at the top of the script to point to your local `train.csv` and `test.csv`.
