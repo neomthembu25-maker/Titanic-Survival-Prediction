@@ -186,3 +186,4 @@ submission <- data.frame(
 )
 
 write.csv(submission, "titanic_submission.csv", row.names = FALSE)
+write.csv(all_data, "titanic_cleaned.csv", row.names = FALSE)
