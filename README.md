@@ -1,5 +1,8 @@
 # Titanic Survival Prediction
 
+![R](https://img.shields.io/badge/R-276DC3?style=flat&logo=r&logoColor=white)
+![Kaggle](https://img.shields.io/badge/Kaggle-20BEFF?style=flat&logo=kaggle&logoColor=white)
+
 Binary classification project predicting passenger survival on the Titanic, built for the [Kaggle Titanic - Machine Learning from Disaster](https://www.kaggle.com/competitions/titanic) competition.
 
 ## Overview
@@ -16,14 +19,27 @@ This project walks through a full analysis pipeline in R: exploratory data analy
 
 Key patterns identified before modeling:
 
-- **Sex** is the strongest single predictor — women survived at a much higher rate than men
-- **Passenger class** shows a clear gradient: 1st class > 2nd class > 3rd class survival
-- **Age** matters at the extremes — young children show a survival advantage
-- **Fare** correlates with survival, largely as a proxy for class
-- **Family size** has a non-linear relationship — passengers traveling alone or in very large families survived less than those in small-to-mid-sized families
-- **Missing data**: Age (~20% missing), Cabin (~77% missing/blank), Embarked (2 missing)
+**Sex was the strongest single predictor** — women survived at a much higher rate than men.
 
-Plots generated during EDA are in `/plots`.
+![Survival by Sex](plots/survival_by_sex.png)
+
+**Passenger class showed a clear gradient** — 1st class survived more often than 2nd, and 2nd more than 3rd.
+
+![Survival by Class](plots/survival_by_class.png)
+
+**Age mattered at the extremes** — young children showed a survival advantage.
+
+![Age Distribution by Survival](plots/age_distribution.png)
+
+**Fare correlated with survival**, largely as a proxy for class.
+
+![Fare Distribution by Survival](plots/fare_distribution.png)
+
+**Family size had a non-linear relationship** — passengers traveling alone or in very large families survived less than those in small-to-mid-sized families. Interestingly, this signal was largely absorbed by other engineered features (Title, IsAlone) once included in the models — a reminder that EDA patterns don't always translate into independent model importance.
+
+![Survival by Family Size](plots/survival_by_family.png)
+
+**Missing data**: Age (~20% missing), Cabin (~77% missing/blank), Embarked (2 missing).
 
 ## Feature Engineering
 
@@ -51,7 +67,9 @@ Two models were trained and compared using 10-fold cross-validation:
 
 The two models perform within a fraction of a percent of each other, suggesting the engineered features (particularly `Title` and `FamilySize`) carry most of the predictive signal, regardless of which algorithm is used on top of them.
 
-Logistic regression also gives interpretable odds ratios for each predictor, while random forest provides a feature importance ranking (see `/plots`).
+Logistic regression also gives interpretable odds ratios for each predictor, while random forest provides a feature importance ranking:
+
+![Random Forest Feature Importance](plots/feature_importance.png)
 
 ## How to Run
 
@@ -60,14 +78,14 @@ Logistic regression also gives interpretable odds ratios for each predictor, whi
 install.packages(c("tidyverse", "caret", "randomForest", "xgboost", "ggplot2", "corrplot", "gridExtra", "stringi"))
 
 # Run the script
-source("titanic_survival.R")
+source("titanic_clean.R")
 ```
 
 Update the `read.csv()` file paths at the top of the script to point to your local `train.csv` and `test.csv`.
 
 ## Output
 
-`predictions/titanic_submission.csv` — final predictions in Kaggle's required submission format (`PassengerId`, `Survived`).
+`outputs/titanic_submission.csv` — final predictions in Kaggle's required submission format (`PassengerId`, `Survived`).
 
 ## Tools
 
