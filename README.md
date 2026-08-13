@@ -21,11 +21,11 @@ Key patterns identified before modeling:
 
 **Sex was the strongest single predictor** — women survived at a much higher rate than men.
 
-![Survival by Sex](Plots/Survival_by_Sex.png)
+![Survival by Sex](Plots/Survival%20by%20Sex.png)
 
 **Passenger class showed a clear gradient** — 1st class survived more often than 2nd, and 2nd more than 3rd.
 
-![Survival by Class](Plots/survival_by_class.png)
+![Survival by Class](Plots/survival%20by%20class.png)
 
 **Age mattered at the extremes** — young children showed a survival advantage.
 
