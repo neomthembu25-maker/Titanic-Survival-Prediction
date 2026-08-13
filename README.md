@@ -29,11 +29,11 @@ Key patterns identified before modeling:
 
 **Age mattered at the extremes** — young children showed a survival advantage.
 
-![Age Distribution by Survival](Plots/age%20distribution.png)
+![Age Distribution by Survival](Plots/age%20distribution%20by%20survival.png)
 
 **Fare correlated with survival**, largely as a proxy for class.
 
-![Fare Distribution by Survival](Plots/fare%20distribution.png)
+![Fare Distribution by Survival](Plots/fare%20distribution%20by%20survival.png)
 
 **Family size had a non-linear relationship** — passengers traveling alone or in very large families survived less than those in small-to-mid-sized families. Interestingly, this signal was largely absorbed by other engineered features (Title, IsAlone) once included in the models — a reminder that EDA patterns don't always translate into independent model importance.
 
