@@ -69,7 +69,7 @@ The two models perform within a fraction of a percent of each other, suggesting 
 
 Logistic regression also gives interpretable odds ratios for each predictor, while random forest provides a feature importance ranking:
 
-![Random Forest Feature Importance](Plots/Feature%20importance.png)
+![Random Forest Feature Importance](Plots/Feature%20Importance.png)
 
 ## How to Run
 
