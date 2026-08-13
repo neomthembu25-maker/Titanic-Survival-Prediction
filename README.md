@@ -21,23 +21,23 @@ Key patterns identified before modeling:
 
 **Sex was the strongest single predictor** — women survived at a much higher rate than men.
 
-![Survival by Sex](plots/survival_by_sex.png)
+![Survival by Sex](Plots/Survival_by_Sex.png)
 
 **Passenger class showed a clear gradient** — 1st class survived more often than 2nd, and 2nd more than 3rd.
 
-![Survival by Class](plots/survival_by_class.png)
+![Survival by Class](Plots/survival_by_class.png)
 
 **Age mattered at the extremes** — young children showed a survival advantage.
 
-![Age Distribution by Survival](plots/age_distribution.png)
+![Age Distribution by Survival](Plots/age_distribution.png)
 
 **Fare correlated with survival**, largely as a proxy for class.
 
-![Fare Distribution by Survival](plots/fare_distribution.png)
+![Fare Distribution by Survival](Plots/fare_distribution.png)
 
 **Family size had a non-linear relationship** — passengers traveling alone or in very large families survived less than those in small-to-mid-sized families. Interestingly, this signal was largely absorbed by other engineered features (Title, IsAlone) once included in the models — a reminder that EDA patterns don't always translate into independent model importance.
 
-![Survival by Family Size](plots/survival_by_family.png)
+![Survival by Family Size](Plots/survival_by_family.png)
 
 **Missing data**: Age (~20% missing), Cabin (~77% missing/blank), Embarked (2 missing).
 
@@ -69,7 +69,7 @@ The two models perform within a fraction of a percent of each other, suggesting 
 
 Logistic regression also gives interpretable odds ratios for each predictor, while random forest provides a feature importance ranking:
 
-![Random Forest Feature Importance](plots/feature_importance.png)
+![Random Forest Feature Importance](Plots/feature_importance.png)
 
 ## How to Run
 
