@@ -37,7 +37,7 @@ Key patterns identified before modeling:
 
 **Family size had a non-linear relationship** — passengers traveling alone or in very large families survived less than those in small-to-mid-sized families. Interestingly, this signal was largely absorbed by other engineered features (Title, IsAlone) once included in the models — a reminder that EDA patterns don't always translate into independent model importance.
 
-![Survival by Family Size](Plots/survival%20by%20family.png)
+![Survival by Family Size](Plots/survival%20by%20family%20size.png)
 
 **Missing data**: Age (~20% missing), Cabin (~77% missing/blank), Embarked (2 missing).
 
